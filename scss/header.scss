@@ -1,2 +1,60 @@
-@use './mixin' as *;
 @use './variable' as * ;
+@use './mixin' as *;
+
+
+header{
+  padding:72px 0 22px;
+  background-color:$bdark;
+  position:relative;
+}
+
+header>div.bottom{
+> h1{
+  @include center;
+  margin-bottom:$s10 * 5;
+}
+> nav{
+  ul{
+    @include layout($start:center);
+    li{
+      margin: 0 $s10 * 3;
+      padding-bottom:$s10;
+      position: relative;
+      a{
+        font-size:$s12;
+        color:$dark;
+      }
+      span{
+        position:absolute;
+        left:0; bottom:0;
+        width:$full;
+        height:2px ;
+        background-color:transparent;
+      }
+      &:hover{
+        span{
+          background-color: $black;
+        }
+      }
+    }
+  }
+}
+}
+
+header>div.top{
+  position:absolute;
+  width:$full;
+  padding:16px 0;
+  background-color: $white;
+  left:0; top:0;
+  p{
+    width:$content;
+    @include margin;
+    a{
+      font-size:$basic;
+      color:$font;
+
+    }
+  }
+}
+

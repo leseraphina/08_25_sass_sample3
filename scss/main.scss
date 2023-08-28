@@ -1,8 +1,10 @@
-@use './mixin' as *;
 @use './variable' as * ;
+@use './mixin' as *;
 
+
+// @use './reset.scss';
 @use './common.scss';
 @use './header.scss';
+
 @use './content.scss';
 @use './footer.scss';
-@use './reset.scss';
